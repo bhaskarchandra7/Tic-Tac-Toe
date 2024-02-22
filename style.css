@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Adjusted for responsiveness */
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw); /* Changed to fraction of available space */
+    grid-template-columns: repeat(3, 10vw); /* Changed to fraction of available space */
+    max-width: 80%; /* Adjusted for responsiveness */
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vmin; /* Changed to vmin for responsive font size */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(189, 177, 189);
+}
+
+.gameinfo {
+    padding: 0 5%; /* Adjusted for responsiveness */
+    margin-top: 20px; /* Adjusted for responsiveness */
+}
+
+/* Adjustments to border classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller devices */
+    .container {
+        max-width: 90%; /* Adjusted for smaller screens */
+    }
+    
+    .box {
+        font-size: 4vmin; /* Adjusted font size for smaller screens */
+    }
+
+    .gameinfo {
+        padding: 0 2%; /* Adjusted padding for smaller screens */
+        margin-top: 10px; /* Adjusted margin for smaller screens */
+    }
+}
